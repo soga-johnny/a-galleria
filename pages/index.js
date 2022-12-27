@@ -18,8 +18,9 @@ function Images() {
       <Image url = "./img2.png" alt = "drill" scale = {[2.2, 2.8, 2]} position = {[-0.3, height -12, 2]}/>
       <Image url = "./img3.png" alt = "drill" scale = {[3, 2.2, 3]} position = {[0, -height -0.8, 1]}/>
       <Image url = "./img4.png" alt = "drill" scale = {[1.6, 2, 4]} position = {[0, -height -2.2, 2]}/>
-      <Image url = "./img5.png" alt = "drill" scale = {[2, 1, 5]} position = {[0.8, -height -3.5, 1.5]}/>
-      <Image url = "./img6.png" alt = "drill" scale = {[0.5, 0.5, 6]} position = {[0, -height -1.3, 6]}/>
+      <Image url = "./img5.png" alt = "drill" scale = {[2, 1.5, 5]} position = {[0.4, -height -3.8, 1.5]}/>
+      <Image url = "./img6.png" alt = "drill" scale = {[2.8, 2, 6]} position = {[-0.1, -height -5.5, 1]}/>
+      <Image url = "./img7.png" alt = "drill" scale = {[1, 0.8, 6]} position = {[-0.4, -height -6.6, 2]}/>
     </group>
   );
 }
@@ -46,9 +47,17 @@ export default function Home() {
       <main className={styles.main}>
         <section className={styles.canvas}>
           <Canvas>
-            <ScrollControls pages={3} damping={4}>
+            <ScrollControls pages={3.2} damping={5}>
               <Scroll>
             <Images />
+            </Scroll>
+            <Scroll html>
+              <h2>
+              <span className={styles.fvCopy}>
+                  What name <br/>
+                  is this?
+              </span>
+              </h2>
             </Scroll>
             </ScrollControls>
           </Canvas>
