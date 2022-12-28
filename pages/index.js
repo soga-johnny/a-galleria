@@ -7,7 +7,6 @@ import styles from '../styles/Home.module.scss'
 import { useRef } from 'react'
 
 
-
 function Images() {
 
   const { height } = useThree((state) => state.viewport);
@@ -22,11 +21,11 @@ function Images() {
     <group ref = {ref}>
       <Image url = "./img1.png" alt = "drill" scale = {[2.6, 1.8, 1]} position = {[0, 0.5, 1]} />
       <Image url = "./img2.png" alt = "drill" scale = {[2.2, 2.8, 2]} position = {[-0.3, height -12, 2]}/>
-      <Image url = "./img3.png" alt = "drill" scale = {[3, 2.2, 3]} position = {[0, -height -0.8, 1]} transparent opacity={0.8}/>
-      <Image url = "./img4.png" alt = "drill" scale = {[1.6, 2, 4]} position = {[0, -height -2.2, 2]}  transparent opacity={0.8}/>
-      <Image url = "./img5.png" alt = "drill" scale = {[2, 1.5, 5]} position = {[0.4, -height -3.8, 1.5]}  transparent opacity={0.8}/>
-      <Image url = "./img6.png" alt = "drill" scale = {[2.8, 2, 6]} position = {[-0.1, -height -5.5, 1]}  transparent opacity={0.8}/>
-      <Image url = "./img7.png" alt = "drill" scale = {[1, 0.8, 6]} position = {[-0.4, -height -6.6, 2]}  transparent opacity={0.8}/>
+      <Image url = "./img3.png" alt = "drill" scale = {[3, 2.2, 3]} position = {[0, -height -0.8, 1]} transparent opacity={0.7}/>
+      <Image url = "./img4.png" alt = "drill" scale = {[1.6, 2, 4]} position = {[0, -height -2.2, 2]}  transparent opacity={0.7}/>
+      <Image url = "./img5.png" alt = "drill" scale = {[2, 1.5, 5]} position = {[0.4, -height -3.8, 1.5]}  transparent opacity={0.7}/>
+      <Image url = "./img6.png" alt = "drill" scale = {[2.8, 2, 6]} position = {[-0.1, -height -5.5, 1]}  transparent opacity={0.7}/>
+      <Image url = "./img7.png" alt = "drill" scale = {[1, 0.8, 6]} position = {[-0.4, -height -6.6, 2]}  transparent opacity={0.7}/>
     </group>
   );
 }
@@ -53,7 +52,7 @@ export default function Home() {
       <main className={styles.main}>
         <section className={styles.canvas}>
           <Canvas>
-            <ScrollControls pages={3.5} damping={5}>
+            <ScrollControls pages={3.22} damping={5}>
 
               <Scroll>
             <Images />
@@ -83,13 +82,14 @@ export default function Home() {
               </span>
               </h2>
 
-             <footer className={styles.footer}>
+             <footer className={styles.footer}
+             style={{ backgroundImage: "url(/footerBg.png)" }}>
               <p>
-              this is documentsite <br/>
-              that scanning <br/>
-              pain-tart to don’t know<br/>
-              it names ever.
+              Give it a try.
               </p>
+              <button className={styles.footerScan}>
+              Scan
+              </button>
               <div className={styles.footerLogo}>
                 <Link href="/">
                   <h2>A-galleria</h2>
